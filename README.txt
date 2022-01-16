@@ -33,11 +33,7 @@ need. You should be able to see that in the comments that I've created.
 
 2) Open up the newly extracted file and create an empty folder inside
 of it. It doesn't really matter what you call it, I suggest using
-'database', but that's up to you. I'm sorry I didn't provide one
-already, but the assignment specifications said not to include any
-database folder and I'm not sure if that also meant empty ones. This
-will be the only folder that you have to manually make so I hope it's
-not an issue.
+'database', but that's up to you.
 
 3) Open up 2 different terminals of your choice. These can be done either
 in VS-Code or through opening up some command prompts.
@@ -67,5 +63,3 @@ you want. Just run either command once and wait for it to finish initializing ev
 as the one where you ran the database initializer. Wait for the server to boot up.
 
 8) Go to the following link to access the website: "http://localhost:3000/"
-
-9) From here you can navigate the website and mark everything as needed.
