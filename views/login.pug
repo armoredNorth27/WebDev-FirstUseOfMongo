@@ -1,0 +1,22 @@
+html(lang = 'en')
+    head 
+        title Login Page 
+        link(rel='stylesheet', href='/login.css')
+        link(href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet")
+    
+    body#body
+        include ./partials/header.pug
+        h2#title Enter your username and password
+
+        p.infoText Username: 
+        input(type='text', id='usernameField')
+        br
+
+        p.infoText Password:
+        input(type='text', id='passwordField')
+        br
+
+        input(type='submit', value='Login', onclick='loginSetup()')
+
+        script(src='../client.js')

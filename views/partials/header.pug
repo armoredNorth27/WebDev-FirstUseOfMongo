@@ -1,0 +1,20 @@
+html 
+    head 
+        link(rel='stylesheet' href='/header.css')
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet")
+
+    body 
+        if session.loggedin
+            .header
+                a(href='/home') Home
+                a(href='/users') Users
+                a(href='/orderform') Order Form 
+                a(href=`/users/${session.userid}`) Profile
+                a(href='/logout') Logout
+
+        else 
+            .header
+                a(href='/home') Home
+                a(href='/users') Users
+                a(href='/register') Register
+                a(href='/login') Login

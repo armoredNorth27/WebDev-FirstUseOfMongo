@@ -1,0 +1,19 @@
+
+#body{
+    background-color: rgb(160, 198, 247);
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Barlow', sans-serif;
+}
+
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: larger;
+    font-family: 'Roboto Condensed', sans-serif;
+}

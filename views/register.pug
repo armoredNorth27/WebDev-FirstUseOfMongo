@@ -1,0 +1,23 @@
+html(lang = 'en')
+
+    head
+        title Registration
+        link(rel='stylesheet' href='/register.css')
+        link(href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet")
+    
+    body#body
+        include ./partials/header.pug
+        h2#title Enter a new username and password
+
+        p.infoText Username: 
+        input(type='text', id='newUsername')
+        br
+
+        p.infoText Password: 
+        input(type='text', id='newPassword')
+        br
+        
+        input(type='submit', value='Register', onclick='createUser()')
+
+        script(src='../client.js')

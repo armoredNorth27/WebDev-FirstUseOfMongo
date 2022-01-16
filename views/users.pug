@@ -1,0 +1,25 @@
+html(lang = 'en')
+
+    head
+        title Users List 
+        link(rel='stylesheet', href='/users.css')
+        link(href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet")
+    
+    body#body
+        include ./partials/header.pug 
+        h1#title List of users:
+
+        each user in allUsers
+            if !qstring
+                if !user.privacy
+                    .users
+                        a(href=`/users/${user._id}`) #{user.username}
+                        br
+            else
+                if !user.privacy && user.username.toLowerCase().indexOf(qstring.toLowerCase()) != -1
+                    .users
+                        a(href=`/users/${user._id}`) #{user.username}
+                        br
+
+        script(src='../client.js')

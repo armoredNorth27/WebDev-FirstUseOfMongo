@@ -1,0 +1,7 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: large;
+    font-family: 'Roboto Condensed', sans-serif;
+}

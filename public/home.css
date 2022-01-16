@@ -1,0 +1,11 @@
+
+#body{
+    background-color: rgb(160, 198, 247);
+}
+
+#title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Barlow', sans-serif;
+}

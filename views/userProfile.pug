@@ -1,0 +1,46 @@
+html(lang='en')
+    head 
+        title #{singleUser.username}  
+        link(rel='stylesheet' href='/userProfile.css')
+        link(href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet")
+    
+    body#body 
+        include ./partials/header.pug
+        h1.center.title #{singleUser.username} 
+
+        p.center.regularText UserID: #{singleUser._id}
+
+        if session.loggedin && session.userid == singleUser._id
+            h2.title Privacy State
+
+            if singleUser.privacy 
+                input(type='radio', name='privacySetting', checked, id='makePrivate')
+                label(for="public") Private
+                br
+
+                input(type='radio', name='privacySetting')
+                label(for="private") Public
+                br
+            else 
+                input(type='radio', name='privacySetting', id='makePrivate')
+                label(for="public") Private
+                br
+
+                input(type='radio', name='privacySetting', checked)
+                label(for="private") Public
+                br
+
+            input(type='submit', value='Change', onclick='changePrivacy()')
+
+        h2.title Order History
+
+        if userOrders.length == 0 
+            p.regularText No orders have been made yet
+        else 
+            each order in userOrders 
+                a.regularText(href=`/orders/${order._id}`) #{order._id}
+                br
+
+        script!= `const userID = ${JSON.stringify(singleUser._id)}`
+        script(src='../client.js')

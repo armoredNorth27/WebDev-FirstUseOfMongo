@@ -1,0 +1,20 @@
+
+#body{
+    background-color: rgb(160, 198, 247);
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.title{
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+}
+
+.regularText{
+    font-family: 'Oswald', sans-serif;
+    font-size: larger;
+}

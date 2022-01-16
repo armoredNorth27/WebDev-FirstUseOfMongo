@@ -1,0 +1,19 @@
+
+#body{
+    background-color: rgb(160, 198, 247);
+}
+
+.center{
+    display: flex;
+    align-items: row;
+    justify-content: space-evenly;
+    font-family: 'Barlow', sans-serif;
+}
+
+.element{
+    display: flex;
+    align-items: column;
+    justify-content: space-evenly;
+    font-family: 'Oswald', sans-serif;
+    font-size: larger;
+}

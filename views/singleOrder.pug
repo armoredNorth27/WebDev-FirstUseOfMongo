@@ -1,0 +1,29 @@
+html 
+    head 
+        title Order #{order._id}
+        link(rel='stylesheet' href='/singleOrder.css')
+        link(href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet")
+    
+    body#body
+        include ./partials/header.pug
+
+        h1.center Order#: #{order._id} 
+
+        h3.center Restaurant: #{order.restaurantName} 
+
+        h3.center Person who placed order: #{user.username} 
+        br
+
+        h3.center Ordered Items 
+
+        each item in order.order 
+            p.element #{item.name} x #{item.quantity}
+        br
+
+        h3.center Order Cost 
+
+        p.element Delivery Fee: $#{order.fee}
+        p.element Subtotal: $#{order.subtotal}
+        p.element Tax: $#{order.tax}
+        p.element Total: $#{order.total}
